@@ -2,9 +2,11 @@ import streamlit as st
 import geemap.foliumap as geemap
 import ee
 
-# 初始化 Google Earth Engine
-service_account_info = st.secrets["earthengine"]
-credentials = ee.ServiceAccountCredentials(None, service_account_info)
+# 服务账号密钥路径
+service_account = r'C:\Users\MT\Desktop\Geemap\ee-tgra-exercise1-4eae5ca40023.json'
+
+# 使用服务账号进行认证
+credentials = ee.ServiceAccountCredentials(None, service_account)
 ee.Initialize(credentials)
 
 st.set_page_config(layout="wide")
