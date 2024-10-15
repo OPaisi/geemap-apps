@@ -8,6 +8,7 @@ service_account = r'C:\Users\MT\Desktop\Geemap\ee-tgra-exercise1-4eae5ca40023.js
 # 使用服务账号进行认证
 credentials = ee.ServiceAccountCredentials(None, service_account)
 ee.Initialize(credentials)
+
 st.set_page_config(layout="wide")
 
 # Customize the sidebar
