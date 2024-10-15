@@ -2,7 +2,10 @@ import streamlit as st
 import geemap.foliumap as geemap
 import ee
 
-
+# 初始化 Google Earth Engine
+service_account_info = st.secrets["earthengine"]
+credentials = ee.ServiceAccountCredentials(None, service_account_info)
+ee.Initialize(credentials)
 
 st.set_page_config(layout="wide")
 
